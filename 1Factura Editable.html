@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Editable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .factura-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin: auto;
+            text-align: center;
+            border: 2px solid black;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+        }
+        .logo {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #d9534f;
+            color: white;
+            padding: 10px;
+        }
+        .details {
+            text-align: right;
+            font-size: 14px;
+        }
+        .details input {
+            border: none;
+            text-align: right;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+       
+        input {
+            border: none;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+        }
+        .total {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+        .footer {
+            margin-top: 10px;
+            text-align: right;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <div class="factura-container">
+        <div class="header">
+            <div class="logo">
+                SUPERMERCADOS <br>"LA VENDEDORA"
+            </div>
+            <div style="text-align:center; color:black;"></div>
+            
+            <tr>Fecha: <input type="date" value="2011-04-25"></tr><br>
+            <br>
+
+            <tr>N° Fra: <input type="text" value="245600"></tr><br>
+            <br>
+                <tr>Cliente: <input type="text" value="Juan Francisco Redrován"></tr><br>
+                <br>
+                <tr>RUC: <input type="text" value="1804562738"></tr><br>
+                <br>
+                <tr>Dirección: <input type="text" value="Ambato, Av. Cevallos"></tr><br>
+                <br>
+            
+            </div>
+        </table>
+        </div>
+
+        <table>
+            <tr>
+                <th>CÓDIGO</th>
+                <th>CANTIDAD</th>
+                <th>CONCEPTO</th>
+                <th>PRECIO</th>
+                <th>IMPORTE</th>
+            </tr>
+            <tr>
+                <td><input type="text" value="A23"></td>
+                <td><input type="number" value="20"></td>
+                <td><input type="text" value="LÁPICES"></td>
+                <td><input type="number" value="25"></td>
+                <td><input type="number" value="500"></td>
+            </tr>
+            <tr>
+                <td><input type="text" value="A45"></td>
+                <td><input type="number" value="100"></td>
+                <td><input type="text" value="BORRADORES"></td>
+                <td><input type="number" value="10"></td>
+                <td><input type="number" value="1.000"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Importe:</td>
+                <td><input type="number" value="1.500"></td>
+            </tr>
+            <tr>
+                <td>Descuento:</td>
+                <td><input type="number" value="75"></td>
+            </tr>
+            <tr>
+                <td>Base Imponible:</td>
+                <td><input type="number" value="1.425"></td>
+            </tr>
+            <tr>
+                <td>IVA:</td>
+                <td><input type="number" value="228"></td>
+            </tr>
+            <tr class="total">
+                <td>Total Factura:</td>
+                <td><input type="number" value="1.653"></td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <button type="submit">Guardar Factura</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
