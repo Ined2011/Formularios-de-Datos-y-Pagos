@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Formularios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e90884;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e90884;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Formulario de Datos -->
+    <div class="form-container">
+        <h2>Formulario de Datos</h2>
+        <form>
+            <label for="nombre">Nombre(s):</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Escribir en Mayúsculas">
+
+            <label for="Apellido">Apellido(s):</label>
+            <input type="text" id="Apellido" name="Apellido" required placeholder="Escribir en Mayúsculas">
+
+            <label for="number">DNI:</label>
+            <input type="number" id="number" name="number" required>
+
+            <label>Nombre de usuario:</label><br>
+                <br>
+                <input name="nombre" required type="text"><br>
+                <br>
+        
+                <label>Contraseña:</label><br>
+                <br>
+                <input type="password" id="password" name="password"><br>
+                <br>
+        
+                <label>Repite Contraseña:</label><br>
+                <br>
+                <input type="password" id="repeat_password" name="repeat_password"><br>
+                <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pagos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: auto;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            margin: 5px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a0bee;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1a0bee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulario de Pago</h2>
+        <form>
+
+            <!-- Sección: Datos Personales -->
+            <fieldset>
+                <legend>MIS DATOS:</legend>
+                <label for="nombre">1. Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escriba aquí su nombre" required>
+
+                <label for="email">2. Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+
+                <label for="telefono">3. Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34984350203" required>
+            </fieldset>
+
+            <!-- Sección: Dirección -->
+            <fieldset>
+                <legend>Dirección</legend>
+                <label for="direccion">1. Dirección:</label>
+                <textarea id="direccion" name="direccion" rows="3" required></textarea>
+
+                <label for="codigo_postal">2. Código Postal:</label>
+                <input type="text" id="codigo_postal" name="codigo_postal" placeholder="CP" required>
+
+                <label for="ciudad">3. Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+            </fieldset>
+
+            <!-- Sección: Forma de Pago -->
+            <fieldset>
+                <legend>Forma de Pago</legend>
+                <label>1. Tarjetas de Crédito:</label>
+                <div class="radio-group">
+                    <input type="radio" id="visa" name="tarjeta" value="visa" required>
+                    <label for="visa">VISA</label><br>
+                    <input type="radio" id="amex" name="tarjeta" value="amex">
+                    <label for="amex">American Express</label><br>
+                    <input type="radio" id="mastercard" name="tarjeta" value="mastercard">
+                    <label for="mastercard">MasterCard</label>
+                </div>
+
+                <label for="num_tarjeta">2. Número de Tarjeta:</label>
+                <input type="text" id="num_tarjeta" name="num_tarjeta" placeholder="Número tarjeta" required>
+
+                <label for="codigo_seguridad">3. Código de Seguridad:</label>
+                <input type="password" id="codigo_seguridad" name="codigo_seguridad" placeholder="Código seguridad" required>
+
+                <label for="nombre_tarjeta">4. Nombre en la Tarjeta:</label>
+                <input type="text" id="nombre_tarjeta" name="nombre_tarjeta" placeholder="Nombre exacto tarjeta" required>
+            </fieldset>
+
+            <button type="submit">Comprar</button>
+        </form>
+    </div>
+
+</body>
+</html>
